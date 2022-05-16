@@ -1,7 +1,7 @@
 import { cac } from 'cac'
 import colors from 'picocolors'
 import consola from 'consola'
-import { createCodeWorksapceFile } from './index'
+import { createCodeWorksapceFile } from '@growing-web/toolkit'
 import pkg from '../package.json'
 
 const NAME = 'web-toolkit'

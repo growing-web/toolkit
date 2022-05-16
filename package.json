@@ -1,11 +1,8 @@
 {
-  "name": "@growing-web/toolkit",
+  "name": "toolkit-monorepo",
   "version": "0.1.1",
-  "description": "@growing-web/toolkit for Growing Web Guidelines.",
-  "keywords": [
-    "growing-web",
-    "toolkit"
-  ],
+  "private": true,
+  "description": "@growing-web/toolkit monorepo.",
   "homepage": "https://github.com/growing-web/toolkit#readme",
   "bugs": {
     "url": "https://github.com/growing-web/toolkit/issues"
@@ -17,30 +14,9 @@
   "license": "MIT",
   "author": "vben",
   "type": "module",
-  "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs",
-      "default": "./dist/index.mjs"
-    },
-    "./cli": {
-      "import": "./dist/cli.mjs",
-      "require": "./dist/cli.cjs",
-      "default": "./dist/cli.mjs",
-      "types": "./dist/cli.d.ts"
-    }
-  },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "bin": {
-    "web-toolkit": "./bin/web-toolkit.mjs"
-  },
   "scripts": {
-    "build": "unbuild",
-    "dev": "unbuild --stub",
-    "prepublishOnly": "pnpm run build",
     "preinstall": "npx only-allow pnpm",
+    "stub": "pnpm --filter @growing-web/** --filter web-toolkit-cli run prepack --stub",
     "postinstall": "husky install",
     "lint": "eslint . --fix",
     "test": "vitest"
@@ -57,14 +33,6 @@
     ]
   },
   "dependencies": {
-    "cac": "^6.7.12",
-    "consola": "^2.15.3",
-    "fast-glob": "^3.2.11",
-    "fs-extra": "^10.1.0",
-    "read-yaml-file": "^2.1.0",
-    "strip-json-comments": "^4.0.0"
-  },
-  "devDependencies": {
     "@commitlint/cli": "^16.3.0",
     "@commitlint/config-conventional": "^16.2.4",
     "@types/fs-extra": "^9.0.13",
@@ -90,5 +58,6 @@
     "unbuild": "^0.7.4",
     "vite": "^2.9.9",
     "vitest": "^0.12.6"
-  }
+  },
+  "packageManager": "pnpm@7.1.0"
 }

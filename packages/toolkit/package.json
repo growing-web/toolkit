@@ -1,0 +1,44 @@
+{
+  "name": "@growing-web/toolkit",
+  "version": "0.1.1",
+  "description": "@growing-web/toolkit for Growing Web Guidelines.",
+  "keywords": [
+    "growing-web",
+    "toolkit"
+  ],
+  "homepage": "https://github.com/growing-web/toolkit#readme",
+  "bugs": {
+    "url": "https://github.com/growing-web/toolkit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/growing-web/toolkit.git",
+    "directory": "packages/toolkit"
+  },
+  "license": "MIT",
+  "author": "vben",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "prepublishOnly": "pnpm run build",
+    "prepack": "npm run dev"
+  },
+  "dependencies": {
+    "consola": "^2.15.3",
+    "fast-glob": "^3.2.11",
+    "fs-extra": "^10.1.0",
+    "read-yaml-file": "^2.1.0",
+    "strip-json-comments": "^4.0.0"
+  }
+}
