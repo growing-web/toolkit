@@ -1,0 +1,16 @@
+{
+  "folders": [
+    {
+      "name": "@growing-web/water",
+      "path": "packages/changeset"
+    },
+    {
+      "name": "@growing-web/codemod",
+      "path": "packages/codemod"
+    },
+    {
+      "name": "root",
+      "path": "."
+    }
+  ]
+}
