@@ -1,10 +1,14 @@
 {
   "name": "@growing-web/web-kit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "bin": {
     "web-kit": "./bin/web-kit.mjs"
   },
+  "files": [
+    "dist",
+    "bin"
+  ],
   "scripts": {
     "build": "unbuild",
     "dev": "unbuild --stub",

@@ -21,6 +21,10 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "bin": "./bin/codemod.mjs",
+  "files": [
+    "dist",
+    "bin"
+  ],
   "scripts": {
     "build": "unbuild",
     "dev": "unbuild --stub",

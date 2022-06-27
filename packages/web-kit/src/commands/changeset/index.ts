@@ -6,24 +6,24 @@ import { release } from './release'
 
 export function initChangesetCommand(cli: CAC) {
   cli
-    .command('changeset change')
+    .command('changeset')
     .usage('创建变更集')
     .option('--empty', '创建空变更集')
     .option('--open', '使用编辑器中打开创建的变更集')
     .action(change)
 
   cli
-    .command('changeset bump')
+    .command('changeset-bump')
     .usage('使用变更集自动更新发布版本和变更日志')
     .option('--preid <tag>', '在对预发布版本进行版本控制时指定标识符')
     .option('--snapshot [snapshot]', '创建一个特殊版本进行测试')
     .option('--canary', '创建一个预发布版本进行测试')
     .action(bump)
 
-  cli.command('changeset pre').usage('进入和退出预发布模式').action(pre)
+  cli.command('changeset-pre').usage('进入和退出预发布模式').action(pre)
 
   cli
-    .command('changeset release')
+    .command('changeset-release')
     .usage('发布 npm 包')
     .option('--tag', '发布 npm 包使用特定的 tag')
     .option(
