@@ -9,8 +9,6 @@ interface ChangeOptions {
 
 export async function change(options: ChangeOptions) {
   const appDir = process.cwd()
-  console.log(1123)
-
   const { packages } = await getPackages(appDir)
   if (packages.length === 0) {
     logger.warn('未找到子项目，请先创建子项目.')
