@@ -1,6 +1,7 @@
 import type { CAC } from 'cac'
 import { initChangesetCommand } from './changeset'
+import { initReleaseCommand } from './release'
 
 export function initCommands(cli: CAC) {
-  initChangesetCommand(cli)
+  Promise.all([initChangesetCommand(cli), initReleaseCommand(cli)])
 }

@@ -2,7 +2,7 @@ import { CAC } from 'cac'
 import { bump } from './bump'
 import { change } from './change'
 import { pre } from './pre'
-import { release } from './release'
+import { release } from './publish'
 import { status } from './status'
 
 export function initChangesetCommand(cli: CAC) {
@@ -24,7 +24,7 @@ export function initChangesetCommand(cli: CAC) {
   cli.command('pre').usage('进入和退出预发布模式').action(pre)
 
   cli
-    .command('release')
+    .command('publish')
     .usage('发布 npm 包')
     .option('--tag', '发布 npm 包使用特定的 tag')
     .option(
