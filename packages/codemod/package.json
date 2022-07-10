@@ -21,6 +21,13 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "bin": "./bin/codemod.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "module": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "files": [
     "dist",
     "bin"
@@ -29,7 +36,7 @@
     "build": "unbuild",
     "dev": "unbuild --stub",
     "prepublishOnly": "pnpm run build",
-    "prestub": "npm run dev"
+    "stub": "npm run dev"
   },
   "dependencies": {
     "@manypkg/get-packages": "^1.1.3",

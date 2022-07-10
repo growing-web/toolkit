@@ -20,7 +20,7 @@
     "preinstall": "npx only-allow pnpm",
     "postinstall": "husky install",
     "lint": "eslint . --fix",
-    "stub": "pnpm --filter @growing-web/** --filter web-toolkit-cli run prestub --stub",
+    "stub": "pnpm --filter @growing-web/** run stub --stub",
     "test": "vitest"
   },
   "lint-staged": {
